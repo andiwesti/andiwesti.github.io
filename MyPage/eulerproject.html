@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Anders</title>
+  <link type="text/css" href="myPage.css" rel="stylesheet">
+</head>
+<header>
+  <h1>Euler Proejct Solutions</h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="pythonProjects.html">Python Projects</a>
+    <a href="eulerProject.html">Project Euler</a>
+    <a href="raspberrypi.html">Rasperry PI</a>
+    <a href="webdesign.html">Web Design</a>
+  </nav>
+</header>
+
+<body>
+<code>
+  numbers = open("(8_numbers.txt").readlines()<br>
+  numbers = list(map(lambda s: s.strip(), numbers))<br>
+<br>
+  series = []<br>
+  for row in numbers:<br>
+      for i in row:<br>
+          series.append(int(i))<br>
+<br>
+  digitsstart = series[0:len(series)-12]<br>
+  productmax = 0<br>
+<br>
+  for idx, digitfirst in enumerate(digitsstart):<br>
+      product = 1<br>
+      string = []<br>
+      for digitcount13 in range (13):<br>
+          product = product * series[idx + digitcount13]<br>
+          string.append(series[idx + digitcount13])<br>
+<br>
+      if product > productmax:<br>
+          productmax = product<br>
+          found = i<br>
+          foundstring = string<br>
+<br>
+  print(found, productmax, foundstring, sep=": ")<br>
+</code>
+
+
+</body>
+
+<footer>Contact</footer>
+</html>
